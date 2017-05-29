@@ -1,0 +1,16 @@
+[Unit]
+Description=Apache NiFi
+After=network.target remote-fs.target
+Documentation=https://nifi.apache.org/
+
+[Service]
+Type=forking
+User=nifi
+Group=nifi
+ExecStart=/opt/nifi/bin/nifi.sh start
+ExecStop=/opt/nifi/bin/nifi.sh stop
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
