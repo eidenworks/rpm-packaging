@@ -74,6 +74,7 @@ exit 0
 
 %post
 %systemd_post nifi.service
+[ -x /usr/bin/firewall-cmd ] && /usr/bin/firewall-cmd --reload --quiet
 
 
 %preun
@@ -81,6 +82,7 @@ exit 0
 
 %postun
 %systemd_postun
+[ -x /usr/bin/firewall-cmd ] && /usr/bin/firewall-cmd --reload --quiet
 
 %files
 %defattr(-,nifi,nifi,755)
