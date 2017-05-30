@@ -1,0 +1,18 @@
+
+[Unit]
+Description=Apache Flink
+Documentation=https://flink.apache.org/
+Requires=network.target remote-fs.target
+After=network.target remote-fs.target
+
+[Service]
+Type=forking
+User=flink
+Group=flink
+ExecStart=/opt/flink/bin/start-cluster.sh
+ExecStop=/opt/flink/bin/stop-cluster.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
