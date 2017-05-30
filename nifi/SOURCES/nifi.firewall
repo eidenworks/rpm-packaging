@@ -3,4 +3,5 @@
   <short>nifi</short>  
   <description>Apache Nifi</description>  
   <port protocol="tcp" port="8080"/>  
+  <port protocol="tcp" port="8081"/>  
  </service>  
