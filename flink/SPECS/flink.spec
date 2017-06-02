@@ -1,11 +1,11 @@
 Name:           flink
-Version:        1.2.1
+Version:        1.3.0
 Release:        1%{?dist}
 Summary:        Apache Flink
 
 License:        ASL 2.0
 URL:            http://flink.apache.com
-Source0:        http://apache.rediris.es/flink/flink-1.2.1/flink-1.2.1-bin-hadoop27-scala_2.11.tgz
+Source0:        http://ftp.wayne.edu/apache/flink/flink-1.3.0/flink-1.3.0-bin-hadoop27-scala_2.10.tgz
 Source1:        flink.service
 
 BuildRequires:  tar
