@@ -21,7 +21,7 @@ Requires:       java, redhat-lsb
 Apache Flink is an open-source stream processing framework for distributed, high-performing, always-available, and accurate data streaming applications.
 
 %prep
-%setup -q -n flink-1.2.1
+%setup -q -n flink-1.3.0
 cp -av %{SOURCE1} .
 
 %install
@@ -65,5 +65,8 @@ exit 0
 /opt/flink
 
 %changelog
+* Fri Jun 02 2017 Miguel Perez Colino <mperez@redhat.com> release 1
+- Upgraded to Flink 1.3.0
+
 * Mon May 29 2017 Miguel Perez Colino <mperez@redhat.com> release 1
 - Initial RPM
