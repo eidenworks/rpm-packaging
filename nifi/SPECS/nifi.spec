@@ -1,6 +1,6 @@
 Name:           nifi
 Version:        1.2.0
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Apache NiFi
 
 License:        ASL 2.0
@@ -10,7 +10,7 @@ Source1:        nifi.service
 Source2:        nifi.firewall
 Source3:        nifi.properties
 
-BuildRequires:  tar
+BuildRequires:  systemd
 Requires:       java, redhat-lsb
 
 # disable debug packages and the stripping of the binaries
@@ -100,6 +100,9 @@ exit 0
 /opt/nifi
 
 %changelog
+* Tue Jun 06 2017 Miguel Perez Colino <mperez@redhat.com> release 5
+- Build requires systemd
+
 * Mon May 29 2017 Miguel Perez Colino <mperez@redhat.com> release 4
 - Added content dirs
 - Improved firewalld rules (only ports 8080 and 8081 to be opened)

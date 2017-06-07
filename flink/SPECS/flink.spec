@@ -1,6 +1,6 @@
 Name:           flink
 Version:        1.3.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Apache Flink
 
 License:        ASL 2.0
@@ -8,7 +8,7 @@ URL:            http://flink.apache.com
 Source0:        http://ftp.wayne.edu/apache/flink/flink-1.3.0/flink-1.3.0-bin-hadoop27-scala_2.10.tgz
 Source1:        flink.service
 
-BuildRequires:  tar
+BuildRequires:  systemd
 Requires:       java, redhat-lsb
 
 # disable debug packages and the stripping of the binaries
@@ -65,6 +65,9 @@ exit 0
 /opt/flink
 
 %changelog
+* Tue Jun 06 2017 Miguel Perez Colino <mperez@redhat.com> release 2
+- Build requires systemd
+
 * Fri Jun 02 2017 Miguel Perez Colino <mperez@redhat.com> release 1
 - Upgraded to Flink 1.3.0
 
