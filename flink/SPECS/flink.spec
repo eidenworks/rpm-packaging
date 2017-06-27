@@ -1,11 +1,11 @@
 Name:           flink
-Version:        1.3.0
-Release:        2%{?dist}
+Version:        1.3.1
+Release:        1%{?dist}
 Summary:        Apache Flink
 
 License:        ASL 2.0
 URL:            http://flink.apache.com
-Source0:        http://ftp.wayne.edu/apache/flink/flink-1.3.0/flink-1.3.0-bin-hadoop27-scala_2.10.tgz
+Source0:        http://ftp.wayne.edu/apache/flink/flink-1.3.1/flink-1.3.1-bin-hadoop27-scala_2.10.tgz
 Source1:        flink.service
 
 BuildRequires:  systemd
@@ -21,7 +21,7 @@ Requires:       java, redhat-lsb
 Apache Flink is an open-source stream processing framework for distributed, high-performing, always-available, and accurate data streaming applications.
 
 %prep
-%setup -q -n flink-1.3.0
+%setup -q -n flink-1.3.1
 cp -av %{SOURCE1} .
 
 %install
@@ -65,11 +65,14 @@ exit 0
 /opt/flink
 
 %changelog
+* Tue Jun 27 2017 Miguel Perez Colino <mperez@redhat.com> release 2
+- Updated to Flink 1.3.1
+
 * Tue Jun 06 2017 Miguel Perez Colino <mperez@redhat.com> release 2
 - Build requires systemd
 
 * Fri Jun 02 2017 Miguel Perez Colino <mperez@redhat.com> release 1
-- Upgraded to Flink 1.3.0
+- Upgraded to Flink 1.3.1
 
 * Mon May 29 2017 Miguel Perez Colino <mperez@redhat.com> release 1
 - Initial RPM
